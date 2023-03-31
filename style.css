@@ -9,9 +9,9 @@
     --font-clamp: clamp(1.5rem, 1.75vw, 2rem);
 }
 
-/* * {
-    font-family: 'Alkatra', cursive;
-} */
+*::selection {
+    background-color: rgb(40, 48, 37);
+}
 
 p,
 .about-div {
