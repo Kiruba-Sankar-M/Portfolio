@@ -6,10 +6,29 @@
     --font-size-500: 1rem;
     --img-size: 350px;
     --font-size-welcome: 4rem;
+    --font-clamp: clamp(1.5rem, 1.75vw, 2rem);
 }
 
 * {
     font-family: 'Alkatra', cursive;
+}
+
+p,
+.about-div {
+    margin: 0;
+    padding: 2.5rem;
+    /* font-size: var(--font-size-500); */
+    font-size: clamp(1rem, 1.75vw, 2rem);
+    font-weight: 600;
+    line-height: 2.5rem;
+    /* text-shadow: 0px 2px 0px rgba(174, 205, 210, 0.76); */
+    color: white;
+}
+
+#h6 {
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: calc(var(--font-clamp) - 0.2rem);
 }
 
 @media screen and (max-width:300px) {
@@ -32,33 +51,28 @@
     }
 }
 
-p,
-h6,
-.about-div {
-    margin: 0;
-    padding: 2rem 1rem 1rem 3rem;
-
-    font-size: var(--font-size-500);
-    font-weight: 600;
-    /* text-shadow: 0px 2px 0px rgba(174, 205, 210, 0.76); */
-    color: white;
-}
 
 #about-me-text {
-    font-size: calc(var(--font-size-500) + 10px);
+    font-size: calc(var(--font-size-500) + 30px);
+    /* font-size: clamp(rem, 2vw, 5rem); */
     color: rgb(255, 38, 38);
     font-weight: 900;
     font-family: 'Oswald', sans-serif;
 }
 
 .img {
-    width: var(--img-size);
+    padding-top: 2rem;
+    width: clamp(300px, 40vw, 350px);
     filter: brightness(0.99);
+    border-radius: 50%;
+    transition: transform 800ms ease;
+}
+
+.img:hover {
+    transform: scale(1.05);
 }
 
 .img-container {
-
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,15 +87,17 @@ h6,
 }
 
 .about-container {
-
+    min-height: 70vh;
     background-color: #4b4343;
     background-image: url("images/img-bg.jpg");
-
     background-blend-mode: multiply;
     backdrop-filter: blur(0.9rem);
     background-size: cover;
     background-repeat: no-repeat;
     backdrop-filter: blur(0.8rem);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%);
+    margin-bottom: -6vw;
+
 }
 
 body {
@@ -234,4 +250,9 @@ section {
     color: aliceblue;
     text-align: center;
     padding: 2rem;
+}
+
+.section-3 {
+    height: 100vh;
+    background-color: aliceblue;
 }
