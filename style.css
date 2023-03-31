@@ -1,3 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&display=swap');
+
+:root {
+    --font-size-400: 0.8rem;
+    --font-size-500: 1rem;
+    --img-size: 350px;
+    --font-size-welcome: 4rem;
+}
+
+* {
+    font-family: 'Alkatra', cursive;
+}
+
+@media screen and (max-width:300px) {
+    :root {
+        --img-size: 250px;
+        --font-size-500: 1.3ch;
+        --font-size-welcome: 2rem;
+    }
+
+    .about-div {
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    :root {
+        --img-size: 350px;
+        --font-size-500: 1.1rem;
+        --font-size-welcome: 5.5rem;
+    }
+}
+
+p,
+h6,
+.about-div {
+    margin: 0;
+    padding: 2rem 1rem 1rem 3rem;
+
+    font-size: var(--font-size-500);
+    font-weight: 600;
+    /* text-shadow: 0px 2px 0px rgba(174, 205, 210, 0.76); */
+    color: white;
+}
+
+#about-me-text {
+    font-size: calc(var(--font-size-500) + 10px);
+    color: rgb(255, 38, 38);
+    font-weight: 900;
+    font-family: 'Oswald', sans-serif;
+}
+
+.img {
+    width: var(--img-size);
+    filter: brightness(0.99);
+}
+
+.img-container {
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-div {
+    /* background-color: aliceblue; */
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-container {
+
+    background-color: #4b4343;
+    background-image: url("images/img-bg.jpg");
+
+    background-blend-mode: multiply;
+    backdrop-filter: blur(0.9rem);
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(0.8rem);
+}
+
 body {
     overflow-x: hidden;
     margin: 0;
@@ -5,7 +91,7 @@ body {
 
 .welcome {
     text-align: center;
-    font-size: 5rem;
+    font-size: var(--font-size-welcome);
     color: white;
     text-shadow: 2px 3px 6px rgba(8, 3, 7, 0.75);
 
@@ -149,4 +235,3 @@ section {
     text-align: center;
     padding: 2rem;
 }
-
