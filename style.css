@@ -10,7 +10,9 @@
 }
 
 *::selection {
-    background-color: rgb(40, 48, 37);
+    background-color: black;
+    color: white;
+    padding-inline: 2rem;
 }
 
 * {
@@ -102,7 +104,7 @@ p,
     background-repeat: no-repeat;
     backdrop-filter: blur(0.8rem);
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%);
-    margin-bottom: -6vw;
+    margin-bottom: -6.5vw;
 }
 
 body {
@@ -273,7 +275,7 @@ section {
 
 
 .section-3 {
-    padding-top: 4rem;
+    padding-top: 8rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -285,15 +287,18 @@ section {
     background-size: cover;
     background-position: bottom;
     background-blend-mode: multiply;
+    clip-path: polygon(0 calc(6vw + 0px), 100% 0, 100% calc(100% - 6vw), 0 100%);
+    margin-bottom: -6vw;
 
 }
 
 .skills-container {
-    padding-inline: 3rem;
+    padding-inline: 1rem;
+    padding-bottom: 7rem;
     min-height: 60vh;
-    gap: 3rem;
+    gap: 4rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     z-index: 20;
@@ -304,15 +309,19 @@ section {
 }
 
 #skills {
+    padding-top: clamp(4rem, 6vh, 10rem);
+    padding-bottom: 4vh;
     display: block;
     font-size: calc(var(--font-size-500) + 40px);
     text-shadow: 0px 2px 0px rgba(174, 205, 210, 0.76);
     color: white;
     font-weight: 900;
     font-family: 'Oswald', sans-serif;
+
 }
 
 .skill-logo {
+    margin-top: 3rem;
     z-index: 10;
     height: clamp(5rem, 10vw, 7rem);
     aspect-ratio: 1;
@@ -340,7 +349,7 @@ a[data-logo-attribute]::after {
     color: rgb(205, 187, 187);
     font-weight: 800;
     inset: 0;
-    top: -4rem;
+    top: -0.5rem;
     left: 50%;
     transform: translate(-50%) scale(0);
     white-space: nowrap;
@@ -353,31 +362,35 @@ a[data-logo-attribute]:hover::after {
 }
 
 
-
-
-
-
-
 .section-4 {
-    min-height: 60vh;
-    background-color: pink;
-    /* z-index: 5555; */
-
-}
-
-.section-4::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 50px;
-    /* background-color: antiquewhite; */
-    background-color: rgb(58, 57, 55);
-    background-image: url("./images/mountain.jpg");
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(95, 86, 77);
+    margin-bottom: -6vw;
+    background-image: url("./images/soft-skills-bg-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
+    /* background-position: bottom; */
     background-blend-mode: multiply;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0%);
-    margin: 0;
-    padding: 0;
+    clip-path: polygon(0 calc(6vw + 0px), 100% 0, 100% calc(100% - 6vw), 0 100%);
+}
+
+#soft-skills {
+    padding-top: clamp(8rem, 6vh, 10rem);
+    padding-bottom: 5rem;
+    display: block;
+    font-size: calc(var(--font-size-500) + 40px);
+    text-shadow: 0px 2px 0px rgba(174, 205, 210, 0.76);
+    color: white;
+    font-weight: 900;
+    font-family: 'Oswald', sans-serif;
+}
+
+.section-5 {
+    min-height: 70vh;
+    background-color: pink;
 }
