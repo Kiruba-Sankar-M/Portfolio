@@ -13,6 +13,10 @@
     background-color: rgb(40, 48, 37);
 }
 
+* {
+    scroll-behavior: smooth;
+}
+
 p,
 .about-div {
     margin: 0;
