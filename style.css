@@ -290,6 +290,7 @@ section {
 
 .skills-container {
     padding: 3rem;
+    padding-bottom: 0;
     min-height: 60vh;
     gap: 3rem;
     display: flex;
@@ -326,8 +327,9 @@ section {
 
 .section-4 {
     min-height: 60vh;
-    background-color: grey;
-    z-index: 5555;
+    background-color: pink;
+    /* z-index: 5555; */
+
 }
 
 .section-4::before {
@@ -337,6 +339,6 @@ section {
     height: 50px;
     background-color: antiquewhite;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0%);
-    border: 0px transparent;
-
+    margin: 0;
+    padding: 0;
 }
