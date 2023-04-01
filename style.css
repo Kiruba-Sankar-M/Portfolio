@@ -289,22 +289,22 @@ section {
 }
 
 .skills-container {
-    padding: 3rem;
-    padding-bottom: 0;
+    padding-inline: 3rem;
     min-height: 60vh;
     gap: 3rem;
     display: flex;
     justify-content: space-evenly;
-    justify-items: center;
+    align-items: center;
     flex-wrap: wrap;
     z-index: 20;
 }
 
 .skills-container h5 {
-    display: inline-block;
+    display: block;
 }
 
 #skills {
+    display: block;
     font-size: calc(var(--font-size-500) + 40px);
     /* font-size: clamp(rem, 2vw, 5rem); */
     color: rgb(255, 38, 38);
