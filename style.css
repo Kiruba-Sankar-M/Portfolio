@@ -344,7 +344,7 @@ a[data-logo-attribute]::after {
     left: 50%;
     transform: translate(-50%) scale(0);
     white-space: nowrap;
-    transition: transform 200ms ease-out;
+    transition: transform 450ms ease-out;
 }
 
 a[data-logo-attribute]:hover::after {
