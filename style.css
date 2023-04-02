@@ -288,7 +288,7 @@ section {
     background-position: bottom;
     background-blend-mode: multiply;
     clip-path: polygon(0 calc(6vw + 0px), 100% 0, 100% calc(100% - 6vw), 0 100%);
-    margin-bottom: -6vw;
+    margin-bottom: -6.1vw;
 
 }
 
@@ -329,6 +329,7 @@ section {
 }
 
 .skill-logo:hover {
+    cursor: grab;
     transform: scale(1.4);
     background-color: rgb(244, 244, 244);
     border-radius: 20px;
@@ -391,6 +392,65 @@ a[data-logo-attribute]:hover::after {
 }
 
 .section-5 {
-    min-height: 70vh;
+    padding-top: 6rem;
+    min-height: 100vh;
     background-color: pink;
+}
+
+.education-details {
+
+    display: grid;
+    place-items: center;
+}
+
+.avrs-img,
+.sastra-img {
+    height: 30rem;
+    width: 90%;
+    /* aspect-ratio: 1; */
+    border-radius: 20px;
+    margin: 15px
+}
+
+.school-container,
+.college-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#education {
+    text-align: center;
+    padding-top: clamp(4rem, 6vh, 10rem);
+    padding-bottom: 4vh;
+    display: block;
+    font-size: calc(var(--font-size-500) + 40px);
+    text-shadow: 0px 2px 0px rgba(174, 205, 210, 0.76);
+    color: black;
+    font-weight: 900;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+.school-marks,
+.college-marks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: row;
+}
+
+#marks {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    text-align: left;
+    display: block;
+    font-size: clamp(0.9rem, 3vw, 1.5rem);
+    text-shadow: 0px 2px 0px rgba(174, 205, 210, 0.76);
+    color: black;
+    font-weight: 900;
+    font-family: 'Oswald', sans-serif;
 }
