@@ -394,63 +394,108 @@ a[data-logo-attribute]:hover::after {
 .section-5 {
     padding-top: 6rem;
     min-height: 100vh;
-    background-color: pink;
+    background-color: rgb(255, 255, 255);
 }
 
-.education-details {
-
-    display: grid;
-    place-items: center;
+:root {
+    --batch-height: 20vh;
 }
 
-.avrs-img,
-.sastra-img {
-    height: 30rem;
-    width: 90%;
-    /* aspect-ratio: 1; */
-    border-radius: 20px;
-    margin: 15px
-}
-
-.school-container,
-.college-container {
+.batch-container {
+    margin: 3rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    height: var(--batch-height);
+    /* width: 80%; */
+    aspect-ratio: 6 / 1;
+
 }
 
-#education {
+.batch-left-circle {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 161, 176);
+    position: relative;
+    overflow: hidden;
+    border-radius: 100vw 10vw 100vw 100vw;
+    margin-right: 2rem;
+}
+
+
+.circle-left {
+    background-image: url("images/avrs.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: var(--batch-height);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    background-color: rgb(51, 43, 43);
+    color: white;
+    position: absolute;
+}
+
+.batch-right-circle {
+    height: 100%;
+    width: 100%;
+    background-color: pink;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10vw 100vw 100vw 100vw;
+    margin-left: 2rem;
+}
+
+.circle-right {
+    background-image: url("images/sastra-logo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: var(--batch-height);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+
+.education-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.education-container .batch-container:nth-of-type(2) {
+    align-self: flex-end;
+}
+
+#education-details {
     text-align: center;
-    padding-top: clamp(4rem, 6vh, 10rem);
-    padding-bottom: 4vh;
+    padding-top: clamp(8rem, 6vh, 10rem);
+    padding-bottom: 5rem;
     display: block;
     font-size: calc(var(--font-size-500) + 40px);
     text-shadow: 0px 2px 0px rgba(174, 205, 210, 0.76);
-    color: black;
+    color: rgb(0, 0, 0);
     font-weight: 900;
     font-family: 'Oswald', sans-serif;
-
 }
 
-.school-marks,
-.college-marks {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    flex-direction: row;
-}
+@media all and (max-width:700px) {
+    :root {
+        --batch-height: 120px;
+    }
 
-#marks {
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    text-align: left;
-    display: block;
-    font-size: clamp(0.9rem, 3vw, 1.5rem);
-    text-shadow: 0px 2px 0px rgba(174, 205, 210, 0.76);
-    color: black;
-    font-weight: 900;
-    font-family: 'Oswald', sans-serif;
+    .batch-container {
+        aspect-ratio: 4.5 / 1;
+        margin-left: 0;
+    }
+
+
 }
