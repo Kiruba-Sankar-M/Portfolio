@@ -403,7 +403,6 @@ a[data-logo-attribute]:hover::after {
 
 .batch-container {
     margin: 3rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -497,5 +496,26 @@ a[data-logo-attribute]:hover::after {
         margin-left: 0;
     }
 
+    .batch-left-circle {
+        margin-left: 1.5rem;
+    }
 
+    .batch-right-circle {
+        margin-right: 1.5rem;
+    }
+}
+
+@media all and (min-width:700px) and (max-width:1050px) {
+    :root {
+        --batch-height: 150px;
+    }
+
+    .batch-container {
+        aspect-ratio: 4.5 / 1;
+        margin-left: 0;
+    }
+
+    .batch-left-circle {
+        margin-left: 2.5rem;
+    }
 }
