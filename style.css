@@ -378,6 +378,7 @@ a[data-logo-attribute]:hover::after {
     /* background-position: bottom; */
     background-blend-mode: multiply;
     clip-path: polygon(0 calc(6vw + 0px), 100% 0, 100% calc(100% - 6vw), 0 100%);
+    margin-bottom: -6.1vw;
 }
 
 #soft-skills {
@@ -394,17 +395,19 @@ a[data-logo-attribute]:hover::after {
 .section-5 {
     padding-top: 6rem;
     min-height: 100vh;
-    background-color: rgb(74, 66, 66);
+    background-color: rgb(49, 42, 42);
     background-image: url("images/education-bg.jpg");
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    clip-path: polygon(0 calc(6vw + 0px), 100% 0, 100% calc(100% - 6vw), 0 100%);
+    margin-bottom: -6.1vw;
 }
 
 :root {
     --batch-height: 20vh;
-    --font-education: 3rem;
+    --font-education: 4dvh;
 }
 
 .batch-container {
@@ -419,7 +422,7 @@ a[data-logo-attribute]:hover::after {
 }
 
 .batch-left-circle {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     background-color: rgb(115, 111, 112);
     position: relative;
@@ -427,15 +430,20 @@ a[data-logo-attribute]:hover::after {
     border-radius: 100vw 10vw 100vw 100vw;
     margin-right: 2rem;
     border: 4px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 
 .circle-left {
+    flex: none;
     background-image: url("images/avrs.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: var(--batch-height);
+    height: 100%;
     aspect-ratio: 1;
     border-radius: 50%;
     position: absolute;
@@ -446,7 +454,7 @@ a[data-logo-attribute]:hover::after {
 }
 
 .batch-right-circle {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     background-color: rgb(126, 89, 95);
     position: relative;
@@ -461,32 +469,49 @@ a[data-logo-attribute]:hover::after {
 
 }
 
-.batch-right-circle::after {
-    position: absolute;
-    top: 30%;
-    left: 5%;
-    content: 'BTECH BIOTECHNOLOGY \a CGPA : 8.2';
-    height: var(--batch-height);
+#college-details {
+    margin: 1em;
+    margin-right: 5.5em;
+    display: block;
     font-size: var(--font-education);
-    width: 100%;
+    /* text-shadow: 0px 2px 0px rgba(174, 205, 210, 0.76); */
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
     color: white;
-    background-color: transparent;
+    font-weight: 900;
+    font-family: 'Oswald', sans-serif;
 }
 
+#school-details {
+    margin: 1em;
+    margin-left: 2rem;
+    display: block;
+    font-size: var(--font-education);
+    /* text-shadow: 0px 2px 0px rgba(174, 205, 210, 0.76); */
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+    color: white;
+    font-weight: 900;
+    font-family: 'Oswald', sans-serif;
+}
 
-
+.separator {
+    color: rgb(255, 79, 79);
+    margin: 0;
+    padding: 0;
+    border: none;
+}
 
 .circle-right {
+    /* flex: none; */
     background-image: url("images/sastra-logo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: var(--batch-height);
+    height: 100%;
     aspect-ratio: 1;
     border-radius: 50%;
     position: absolute;
-    right: -0.5rem;
-    top: -0.2rem;
+    right: -0.2rem;
+    top: -0.1rem;
     background-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
 }
@@ -504,13 +529,18 @@ a[data-logo-attribute]:hover::after {
     align-self: flex-end;
 }
 
+.education-container .batch-container:nth-of-type(3) {
+    margin-bottom: 13rem;
+}
+
 #education-details {
     text-align: center;
-    padding-top: clamp(8rem, 6vh, 10rem);
+    padding-top: clamp(6rem, 4vh, 10rem);
     padding-bottom: 5rem;
     display: block;
     font-size: calc(var(--font-size-500) + 40px);
-    text-shadow: 0px 2px 0px rgba(174, 205, 210, 0.76);
+    /* text-shadow: 0px 2px 0px rgba(174, 205, 210, 0.76); */
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
     color: rgb(255, 255, 255);
     font-weight: 900;
     font-family: 'Oswald', sans-serif;
@@ -519,6 +549,7 @@ a[data-logo-attribute]:hover::after {
 @media all and (max-width:370px) {
     :root {
         --batch-height: 70px;
+        --font-education: 1.5dvh;
     }
 
     .batch-container {
@@ -537,12 +568,21 @@ a[data-logo-attribute]:hover::after {
     .education-container {
         flex-wrap: wrap;
         flex-direction: row;
+    }
+
+    #school-details {
+        margin-left: 5rem;
+    }
+
+    .education-container .batch-container:nth-of-type(3) {
+        margin-bottom: 5rem;
     }
 }
 
 @media all and (min-width:370px) and (max-width:420px) {
     :root {
         --batch-height: 90px;
+        --font-education: ;
     }
 
     .batch-container {
@@ -563,11 +603,21 @@ a[data-logo-attribute]:hover::after {
         flex-wrap: wrap;
         flex-direction: row;
     }
+
+    #school-details {
+        margin-left: 6rem;
+    }
+
+    .education-container .batch-container:nth-of-type(3) {
+        margin-bottom: 5rem;
+    }
+
 }
 
 @media all and (min-width:420px)and (max-width:520px) {
     :root {
         --batch-height: 100px;
+        --font-education: ;
     }
 
     .batch-container {
@@ -587,6 +637,14 @@ a[data-logo-attribute]:hover::after {
     .education-container {
         flex-wrap: wrap;
         flex-direction: row;
+    }
+
+    #school-details {
+        margin-left: 6rem;
+    }
+
+    .education-container .batch-container:nth-of-type(3) {
+        margin-bottom: 6rem;
     }
 }
 
@@ -594,6 +652,7 @@ a[data-logo-attribute]:hover::after {
 @media all and (min-width:520px) and (max-width:700px) {
     :root {
         --batch-height: 120px;
+        --font-education: ;
     }
 
     .batch-container {
@@ -613,11 +672,16 @@ a[data-logo-attribute]:hover::after {
         flex-wrap: wrap;
         flex-direction: row;
     }
+
+    .education-container .batch-container:nth-of-type(3) {
+        margin-bottom: 6rem;
+    }
 }
 
 @media all and (min-width:700px) and (max-width:1150px) {
     :root {
         --batch-height: 150px;
+        --font-education: 3dvh;
     }
 
     .batch-container {
@@ -628,4 +692,13 @@ a[data-logo-attribute]:hover::after {
     .batch-left-circle {
         margin-left: 2.5rem;
     }
+
+    .education-container .batch-container:nth-of-type(3) {
+        margin-bottom: 6rem;
+    }
+}
+
+.section-6 {
+    min-height: 100vh;
+    background-color: pink;
 }
