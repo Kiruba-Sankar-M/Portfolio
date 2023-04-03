@@ -14,3 +14,22 @@ mobileNavToggle.addEventListener('click', () => {
 
     }
 })
+
+const sliders = document.querySelectorAll(".sliders");
+appearOnScrollOptions = {
+    threshole: 0,
+    rootMargin: "250px 0px -150px 0px"
+};
+const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting)
+            return;
+        entry.target.classList.toggle("appear", entry.isIntersecting);
+        appearOnScroll.unobserve(entry.target);
+
+    })
+}, appearOnScrollOptions)
+
+sliders.forEach(slider => {
+    appearOnScroll.observe(slider);
+})

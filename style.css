@@ -58,6 +58,9 @@ p,
     }
 }
 
+#about-me-content {
+    line-height: 3rem;
+}
 
 #about-me-text {
     font-size: calc(var(--font-size-500) + 30px);
@@ -448,9 +451,11 @@ a[data-logo-attribute]:hover::after {
     border-radius: 50%;
     position: absolute;
     left: 0;
+    top: 0;
     background-color: rgb(51, 43, 43);
     color: white;
     position: absolute;
+    border: 4px solid rgb(0, 0, 0);
 }
 
 .batch-right-circle {
@@ -510,10 +515,11 @@ a[data-logo-attribute]:hover::after {
     aspect-ratio: 1;
     border-radius: 50%;
     position: absolute;
-    right: -0.2rem;
-    top: -0.1rem;
+    right: 0;
+    top: 0;
     background-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
+    border: 4px solid rgb(0, 0, 0);
 }
 
 .education-container {
@@ -696,9 +702,47 @@ a[data-logo-attribute]:hover::after {
     .education-container .batch-container:nth-of-type(3) {
         margin-bottom: 6rem;
     }
+
+    #school-details {
+        margin-left: 6rem;
+    }
 }
 
 .section-6 {
     min-height: 100vh;
     background-color: pink;
+}
+
+.from-left {
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.from-right {
+    transform: translate(50%);
+    opacity: 0;
+}
+
+
+.from-left,
+.from-right {
+    transition: opacity 550ms ease-in, transform 550ms ease-in;
+
+}
+
+.from-left.appear,
+.from-right.appear {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.batch-right-circle:hover,
+.batch-left-circle:hover {
+    transform: scale(1.05);
+    border: 4px solid rgb(255, 0, 0);
+}
+
+.batch-right-circle,
+.batch-left-circle {
+    transition: all 350ms ease-in;
 }
