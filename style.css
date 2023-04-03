@@ -394,11 +394,17 @@ a[data-logo-attribute]:hover::after {
 .section-5 {
     padding-top: 6rem;
     min-height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(74, 66, 66);
+    background-image: url("images/education-bg.jpg");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 :root {
     --batch-height: 20vh;
+    --font-education: 3rem;
 }
 
 .batch-container {
@@ -415,11 +421,12 @@ a[data-logo-attribute]:hover::after {
 .batch-left-circle {
     height: 100%;
     width: 100%;
-    background-color: rgb(255, 161, 176);
+    background-color: rgb(115, 111, 112);
     position: relative;
     overflow: hidden;
     border-radius: 100vw 10vw 100vw 100vw;
     margin-right: 2rem;
+    border: 4px solid white;
 }
 
 
@@ -441,12 +448,33 @@ a[data-logo-attribute]:hover::after {
 .batch-right-circle {
     height: 100%;
     width: 100%;
-    background-color: pink;
+    background-color: rgb(126, 89, 95);
     position: relative;
     overflow: hidden;
     border-radius: 10vw 100vw 100vw 100vw;
     margin-left: 2rem;
+    border: 4px solid rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
 }
+
+.batch-right-circle::after {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    content: 'BTECH BIOTECHNOLOGY \a CGPA : 8.2';
+    height: var(--batch-height);
+    font-size: var(--font-education);
+    width: 100%;
+    color: white;
+    background-color: transparent;
+}
+
+
+
 
 .circle-right {
     background-image: url("images/sastra-logo.jpg");
@@ -457,7 +485,8 @@ a[data-logo-attribute]:hover::after {
     aspect-ratio: 1;
     border-radius: 50%;
     position: absolute;
-    right: 0;
+    right: -0.5rem;
+    top: -0.2rem;
     background-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
 }
@@ -468,6 +497,7 @@ a[data-logo-attribute]:hover::after {
     align-items: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
+
 }
 
 .education-container .batch-container:nth-of-type(2) {
@@ -481,19 +511,94 @@ a[data-logo-attribute]:hover::after {
     display: block;
     font-size: calc(var(--font-size-500) + 40px);
     text-shadow: 0px 2px 0px rgba(174, 205, 210, 0.76);
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-weight: 900;
     font-family: 'Oswald', sans-serif;
 }
 
-@media all and (max-width:700px) {
+@media all and (max-width:370px) {
+    :root {
+        --batch-height: 70px;
+    }
+
+    .batch-container {
+        aspect-ratio: 4.5 / 1;
+    }
+
+    .batch-left-circle {
+        align-self: flex-start;
+        margin-left: 1.5rem;
+    }
+
+    .batch-right-circle {
+        margin-right: 1.5rem;
+    }
+
+    .education-container {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+@media all and (min-width:370px) and (max-width:420px) {
+    :root {
+        --batch-height: 90px;
+    }
+
+    .batch-container {
+        aspect-ratio: 4.5 / 1;
+        /* margin-right: 0; */
+    }
+
+    .batch-left-circle {
+        align-self: flex-start;
+        margin-left: 1.5rem;
+    }
+
+    .batch-right-circle {
+        margin-right: 1.5rem;
+    }
+
+    .education-container {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+@media all and (min-width:420px)and (max-width:520px) {
+    :root {
+        --batch-height: 100px;
+    }
+
+    .batch-container {
+        aspect-ratio: 4.5 / 1;
+        /* margin-right: 0; */
+    }
+
+    .batch-left-circle {
+        align-self: flex-start;
+        margin-left: 1.5rem;
+    }
+
+    .batch-right-circle {
+        margin-right: 1.5rem;
+    }
+
+    .education-container {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+
+@media all and (min-width:520px) and (max-width:700px) {
     :root {
         --batch-height: 120px;
     }
 
     .batch-container {
         aspect-ratio: 4.5 / 1;
-        margin-left: 0;
+
     }
 
     .batch-left-circle {
@@ -503,9 +608,14 @@ a[data-logo-attribute]:hover::after {
     .batch-right-circle {
         margin-right: 1.5rem;
     }
+
+    .education-container {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
 }
 
-@media all and (min-width:700px) and (max-width:1050px) {
+@media all and (min-width:700px) and (max-width:1150px) {
     :root {
         --batch-height: 150px;
     }
