@@ -708,11 +708,6 @@ a[data-logo-attribute]:hover::after {
     }
 }
 
-.section-6 {
-    min-height: 100vh;
-    background-color: pink;
-}
-
 .from-left {
     transform: translateX(-50%);
     opacity: 0;
@@ -745,4 +740,27 @@ a[data-logo-attribute]:hover::after {
 .batch-right-circle,
 .batch-left-circle {
     transition: all 350ms ease-in;
+}
+
+.section-6 {
+    padding-top: 8rem;
+    min-height: 100vh;
+    background-color: pink;
+}
+
+.internship-carousel {
+    height: 70vh;
+    position: relative;
+}
+
+.internship-image {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+.carousel-text {
+    position: absolute;
+    top: 0;
+    z-index: 33;
 }
