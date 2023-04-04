@@ -771,3 +771,43 @@ a[data-logo-attribute]:hover::after {
     font-size: clamp(1rem, 4vw, 2.5rem);
     line-height: 3rem;
 }
+
+.section-7 {
+    background-color: bisque;
+    min-height: 20vh;
+}
+
+.contact-details {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-details :is(.phone, .mail) {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-logo {
+    display: block;
+    margin-block: 3rem;
+    margin-inline: 1rem;
+    height: 50px;
+    aspect-ratio: 1;
+}
+
+@media all and (max-width:510px) {
+    .contact-logo {
+        margin-bottom: 1rem;
+    }
+
+    .phone {
+        justify-content: center;
+        align-items: center;
+    }
+}
