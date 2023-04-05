@@ -5,7 +5,7 @@
     --font-size-400: 0.8rem;
     --font-size-500: 1rem;
     --img-size: 350px;
-    --font-size-welcome: 3rem;
+    --font-size-welcome: clamp(2rem, 5vw, 8rem);
     --font-clamp: clamp(1.5rem, 1.75vw, 2rem);
 }
 
@@ -42,7 +42,7 @@ p,
     :root {
         --img-size: 250px;
         --font-size-500: 1.3ch;
-        --font-size-welcome: 2rem;
+        /* --font-size-welcome: 2rem; */
     }
 
     .about-div {
@@ -54,7 +54,7 @@ p,
     :root {
         --img-size: 350px;
         --font-size-500: 1.1rem;
-        --font-size-welcome: 5.5rem;
+
     }
 }
 
@@ -120,6 +120,7 @@ body {
     font-size: var(--font-size-welcome);
     color: white;
     text-shadow: 2px 3px 6px rgba(8, 3, 7, 0.75);
+    font-family: 'Oswald', sans-serif;
 
 }
 
@@ -385,6 +386,7 @@ a[data-logo-attribute]:hover::after {
 }
 
 #soft-skills {
+    text-align: center;
     padding-top: clamp(8rem, 6vh, 10rem);
     padding-bottom: 5rem;
     display: block;
@@ -748,6 +750,25 @@ a[data-logo-attribute]:hover::after {
     background-color: rgb(0, 0, 0);
 }
 
+.internship {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.internship h5 {
+    text-align: center;
+    padding-top: clamp(0.5rem, 2vh, 10rem);
+    padding-bottom: 5rem;
+    display: block;
+    font-size: clamp(40px, 2vw, 100px);
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+}
+
 .internship-carousel {
     height: 70vh;
     position: relative;
@@ -756,7 +777,7 @@ a[data-logo-attribute]:hover::after {
 .internship-image {
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.4);
+    filter: brightness(0.2);
 }
 
 .carousel-text {
@@ -774,40 +795,41 @@ a[data-logo-attribute]:hover::after {
 
 .section-7 {
     background-color: bisque;
-    min-height: 20vh;
+    min-height: 15vh;
+
 }
 
 .contact-details {
+    padding-top: 1.5rem;
+    height: auto;
     display: flex;
-    text-align: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    padding-inline: 1rem;
 }
 
-.contact-details :is(.phone, .mail) {
+.phone,
+.mail {
     text-align: center;
+    padding-top: 1rem;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
+}
+
+.phone h6,
+.mail h6 {
+    display: inline-block;
+    font-size: clamp(13px, 1.8vw, 20px);
 }
 
 .contact-logo {
-    display: block;
-    margin-block: 3rem;
+    margin-bottom: 0.5rem;
     margin-inline: 1rem;
-    height: 50px;
+    height: clamp(20px, 2vw, 40px);
     aspect-ratio: 1;
 }
 
-@media all and (max-width:510px) {
-    .contact-logo {
-        margin-bottom: 1rem;
-    }
-
-    .phone {
-        justify-content: center;
-        align-items: center;
-    }
-}
+@media all and (max-width:510px) {}
